@@ -41,7 +41,7 @@ def build_model():
             metrics=['accuracy'])
 
     # モデルのロード
-    model = load_model('./fluit.hs')
+    model = load_model('./food_cnn.hs')
 
     return model
 
