@@ -2,3 +2,5 @@
 numpy
 keras
 pillow
+urllib
+bs4
