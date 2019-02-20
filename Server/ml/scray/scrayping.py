@@ -1,9 +1,13 @@
 import urllib
 from bs4 import BeautifulSoup
+import re
+
+#carrot,tomato,onion,cucumber,potato
+#dictionay = {"人参":"carrot","にんじん":"carrot","ニンジン":"carrot","玉葱":"onion","たまねぎ":"onion","玉ねぎ":"onion","タマネギ":"onion","トマト":"tomato","とまと":"tomato","キュウリ":"cucumber","きゅうり":"cucumber","胡瓜":"cucumber","じゃがいも":"potato","ジャガイモ":"potato","じゃが芋":"potato"}
 
 # アクセスするURL
 # url = "https://cookpad.com/recipe/5492521"
-def recipe(url):
+def recipe(url,check):
 
     # URLにアクセスする htmlが帰ってくる → <html><head><title>経済、株価、ビジネス、政治のニュース:日経電子版</title></head><body....
     html = urllib.request.urlopen(url)
@@ -33,6 +37,37 @@ def recipe(url):
     namelist = soup.findAll("div", class_="ingredient_name")
     for ingredient_name in namelist:
         ingredients.append(ingredient_name.get_text())
+        # if ingredient_name.get_text() in dictionay:
+        #     ingredients.append(dictionay[ingredient_name.get_text()])
+        # else:
+        #     ingredients.append(ingredient_name.get_text())
+        # flag = 0
+        # for check_ingredient in check:
+
+
+
+            # regex = r'[一-龠]'
+            # matchedList = re.findall(regex,check_ingredient)
+            # for m in matchedList:
+            #    check_ingredient = check_ingredient.replace(m, urllib.parse.quote_plus(m, encoding="utf-8"))
+            #
+            # ingredient_name.get_text()
+            # regex = r'[0-9a-zA-Zあ-んア-ン一-鿐]'
+            # matchedList = re.findall(regex,ingredient_name.get_text())
+            # for m in matchedList:
+            #    ingredient_name_utf8 = ingredient_name.get_text().replace(m, urllib.parse.quote_plus(m, encoding="utf-8"))
+
+
+            # print(check_ingredient.encode('utf-8'), ingredient_name_utf8.encode('utf-8'))
+            # print(check_ingredient, ingredient_name_utf8)
+
+            # print(check_ingredient.encode('utf-8'), ingredient_name.get_text().encode('utf-8'))
+
+            # if ~(check_ingredient in ingredient_name_utf8):
+            #     flag = flag + 1
+
+        # if (flag == len(check)):
+
 
 
     # #食材の量を出力
