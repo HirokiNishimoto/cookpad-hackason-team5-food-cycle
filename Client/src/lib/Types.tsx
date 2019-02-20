@@ -1,5 +1,6 @@
 
 export interface Item {
     name: string,
-    count: number
+    count: number,
+    id: string
 }

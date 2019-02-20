@@ -74359,6 +74359,13 @@ function App() {
             });
         }
     }
+    function post(e) {
+        return __awaiter(this, void 0, void 0, function* () {
+            for (let image of images) {
+                yield lib_1.postItems(image.title, 1);
+            }
+        });
+    }
     return (react_1.default.createElement("div", { className: Style.base },
         react_1.default.createElement(AppBar_1.default, { className: Style.header },
             react_1.default.createElement(Typography_1.default, { variant: "h5", color: "textSecondary", className: Style.title }, "Food Cycle"),
@@ -74374,7 +74381,7 @@ function App() {
                                 react_1.default.createElement("img", { src: image.url, alt: "error" }),
                                 image.title == "" ? null :
                                     react_1.default.createElement(GridListTileBar_1.default, { title: image.title })))))),
-                        react_1.default.createElement(Fab_1.default, { className: Style.addFab, variant: "extended", color: "secondary" },
+                        react_1.default.createElement(Fab_1.default, { className: Style.addFab, variant: "extended", color: "secondary", onClick: post },
                             react_1.default.createElement(Add_1.default, null),
                             "\u51B7\u8535\u5EAB\u306B\u8FFD\u52A0")));
                 default:
@@ -74526,19 +74533,27 @@ function fetchItemName(file) {
 exports.fetchItemName = fetchItemName;
 function fetchAllItems() {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log("fetch");
-        return [
-            { name: "carrot", count: 3 },
-            { name: "tomato", count: 4 }
-        ];
+        const data = yield axios_1.default.get("/item/");
+        var retval = [];
+        for (let item of data.data) {
+            retval.push({ name: item.name, count: item.count, id: item.id });
+        }
+        return retval;
     });
 }
 exports.fetchAllItems = fetchAllItems;
-function postItems() {
+function postItems(name, count) {
     return __awaiter(this, void 0, void 0, function* () {
+        axios_1.default.post("/item/create/", { name: name, count: count });
     });
 }
 exports.postItems = postItems;
+function updateCount(id, count) {
+    return __awaiter(this, void 0, void 0, function* () {
+        axios_1.default.post("/item/update/", { id: id, count: count });
+    });
+}
+exports.updateCount = updateCount;
 
 
 /***/ }),

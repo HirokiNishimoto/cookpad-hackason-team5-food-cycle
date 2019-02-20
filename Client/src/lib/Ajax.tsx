@@ -9,13 +9,18 @@ export async function fetchItemName(file: File):Promise<string>{
 }
 
 export async function fetchAllItems():Promise<Item[]>{
-    console.log("fetch")
-    return [
-        {name: "carrot", count: 3},
-        {name: "tomato", count: 4}
-    ]
+    const data = await axios.get("/item/")
+    var retval: Item[] = [];
+    for(let item of data.data){
+        retval.push({name:item.name,count:item.count,id:item.id})
+    }
+    return retval;
 }
 
-export async function postItems(){
-    
+export async function postItems(name:string,count: number){
+    axios.post("/item/create/",{name:name, count:count})
+}
+
+export async function updateCount(id: string, count: number){
+    axios.post("/item/update/",{id:id,count:count})
 }

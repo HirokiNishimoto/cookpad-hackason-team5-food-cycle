@@ -15,7 +15,7 @@ import Dialog from "@material-ui/core/Dialog";
 import Fab from "@material-ui/core/Fab";
 import Add from "@material-ui/icons/Add";
 
-import { fetchItemName, Item, fetchAllItems } from "lib";
+import { fetchItemName, Item, fetchAllItems, postItems } from "lib";
 import { Refri } from "./Refrigerator";
 import * as Style from "./App.css";
 
@@ -80,6 +80,12 @@ function App(){
         }
     }
 
+    async function post(e:React.MouseEvent<HTMLElement, MouseEvent>){
+        for(let image of images){
+            await postItems(image.title,1);
+        }
+    }
+
     return(
         <div className={Style.base}>
 
@@ -109,7 +115,7 @@ function App(){
                                 ))}
                                 </GridList>
                             </div>
-                            <Fab className={Style.addFab} variant="extended" color="secondary">
+                            <Fab className={Style.addFab} variant="extended" color="secondary" onClick={post}>
                                 <Add />
                                 冷蔵庫に追加
                             </Fab>
