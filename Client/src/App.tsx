@@ -10,6 +10,10 @@ import LocalShipping from "@material-ui/icons/LocalShipping";
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import Camera from "@material-ui/icons/AddAPhoto";
+import Drawer from "@material-ui/core/Drawer"; 
+import Dialog from "@material-ui/core/Dialog";
+import Fab from "@material-ui/core/Fab";
+import Add from "@material-ui/icons/Add";
 
 import { fetchItemName, Item, fetchAllItems } from "lib";
 import { Refri } from "./Refrigerator";
@@ -18,13 +22,15 @@ import * as Style from "./App.css";
 enum NavTab {
     refrigerator,
     get,
-    reccomend
+    reccomend,
+    add
 }
 
 function App(){
     const [images, setImages] = useState<Images[]>([]);
     const [tab, setTab] = useState(NavTab.refrigerator);
     const [items, setItems] = useState<Item[]>([])
+    const [onadd, setonAdd] = useState(false);
 
     useEffect(() => {
         fetchAllItems().then((items) => {
@@ -33,6 +39,7 @@ function App(){
     },[])
 
     function onInsertPhoto(){
+        setTab(NavTab.add);
         const camera = document.getElementById("camera-input") as HTMLInputElement;
         camera.click();
     }
@@ -66,33 +73,48 @@ function App(){
 
     function onTabChange(ev: React.ChangeEvent<{}>, val: any){
         setTab(val);
+        if(val == NavTab.refrigerator){
+            fetchAllItems().then((items) => {
+                setItems(items);
+            })
+        }
     }
 
     return(
         <div className={Style.base}>
+
             <AppBar className={Style.header}>
                 <Typography variant="h5" color="textSecondary" className={Style.title}>
                     Food Cycle
                 </Typography>
                 <Camera fontSize="large" className={Style.account} onClick={onInsertPhoto} />
             </AppBar>
-            {/* <div className={Style.gridCtnr}>
-                <GridList cellHeight={160} cols={2} className={Style.gridList}>
-                {images.map((image) => (
-                    <GridListTile key={image.file.name} cols={1}>
-                        <img src={image.url} alt="error"/>
-                        {image.title == "" ? null :
-                        <GridListTileBar title={image.title}/>
-                        }
-                    </GridListTile>
-                ))}
-                </GridList>
-            </div> */}
 
             {(function(){
             switch (tab) {
                 case NavTab.refrigerator:
                     return (<Refri className={Style.refri} items={items}/>)
+                case NavTab.add:
+                    return (
+                        <div className={Style.drawer}>
+                            <div className={Style.gridCtnr}>
+                                <GridList cellHeight={160} cols={2} className={Style.gridList}>
+                                {images.map((image) => (
+                                    <GridListTile key={image.file.name} cols={1}>
+                                        <img src={image.url} alt="error"/>
+                                        {image.title == "" ? null :
+                                        <GridListTileBar title={image.title}/>
+                                        }
+                                    </GridListTile>
+                                ))}
+                                </GridList>
+                            </div>
+                            <Fab className={Style.addFab} variant="extended" color="secondary">
+                                <Add />
+                                冷蔵庫に追加
+                            </Fab>
+                        </div>
+                    )
                 default:
                     return null;
             }
@@ -110,7 +132,6 @@ function App(){
                     <Tab value={NavTab.get} label="注文" icon={<LocalShipping />} />
                 </Tabs>
             </AppBar>
-            
             <form action="">
                 <input type="file" accept="image/" hidden id="camera-input" onChange={onChangeImage}/>
             </form>

@@ -9,8 +9,13 @@ export async function fetchItemName(file: File):Promise<string>{
 }
 
 export async function fetchAllItems():Promise<Item[]>{
+    console.log("fetch")
     return [
         {name: "carrot", count: 3},
         {name: "tomato", count: 4}
     ]
+}
+
+export async function postItems(){
+    
 }

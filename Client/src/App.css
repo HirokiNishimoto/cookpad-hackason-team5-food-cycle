@@ -63,3 +63,20 @@
     width: 100vw;
     height: calc(100% - 130px);
 }
+
+.drawer{
+    width: 100vw;
+    height: calc(100% - 60px);
+}
+
+.addFab{
+    position: fixed !important;
+    bottom: 100px;
+    right: 30px;
+    width: 100px;
+}
+
+.addSubHeader{
+    position: absolute;
+    top: 70px;
+}

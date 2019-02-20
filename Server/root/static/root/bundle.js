@@ -36075,6 +36075,38 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/icons/Add.js":
+/*!************************************************!*\
+  !*** ./node_modules/@material-ui/icons/Add.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement(_react.default.Fragment, null, _react.default.createElement("path", {
+  d: "M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+}), _react.default.createElement("path", {
+  fill: "none",
+  d: "M0 0h24v24H0z"
+})), 'Add');
+
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/icons/AddAPhoto.js":
 /*!******************************************************!*\
   !*** ./node_modules/@material-ui/icons/AddAPhoto.js ***!
@@ -38284,7 +38316,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".LeFt5T0EqAiCJR4_F2OqM{\n    background-color: #fff3e0;\n    height: 100vh;\n}\n\n.hwRc6f9WKlpNo0-FJMnLB{\n    position: fixed !important;\n    height: 60px;\n}\n\n.jrOXxo5ePDyXJpxqVgSmZ{\n    position: absolute;\n    top: 0%;\n    bottom: 0%;\n    margin: auto auto auto 40px !important;\n    line-height: 60px !important;\n}\n\n.aCo3OzLsfIYPjsuZXSabN{\n    position: absolute;\n    right: 20px;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n}\n\n._3h-jo0U0xXxSZ1fK-9baK5{\n    position: fixed !important;\n    right: 30px;\n    bottom: 50px;\n}\n\n.PDbjULsi7JNe12ZTYmCrl{\n    position: absolute;\n    top: 70px;\n    width: calc(100% - 10px);\n    right: 0%;\n    left: 0%;\n    margin-right: auto !important;\n    margin-left: auto !important;\n}\n\n._3z0Q5bl8Jkz6zlKbo5EpWw{\n    overflow: scroll;\n}\n\n._1fwnD348WPEtOs2Aa-4e82{\n    position: absolute;\n    margin-top: auto;\n    height: 70px;\n    bottom: 0;\n}\n\n._1JyRgytGS-wiu34QSFDH5e{\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n}\n\n.oqdLfessAg8s3u0t1ok58{\n    position: absolute;\n    top: 60px;\n    width: 100vw;\n    height: calc(100% - 130px);\n}", ""]);
+exports.push([module.i, ".LeFt5T0EqAiCJR4_F2OqM{\n    background-color: #fff3e0;\n    height: 100vh;\n}\n\n.hwRc6f9WKlpNo0-FJMnLB{\n    position: fixed !important;\n    height: 60px;\n}\n\n.jrOXxo5ePDyXJpxqVgSmZ{\n    position: absolute;\n    top: 0%;\n    bottom: 0%;\n    margin: auto auto auto 40px !important;\n    line-height: 60px !important;\n}\n\n.aCo3OzLsfIYPjsuZXSabN{\n    position: absolute;\n    right: 20px;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n}\n\n._3h-jo0U0xXxSZ1fK-9baK5{\n    position: fixed !important;\n    right: 30px;\n    bottom: 50px;\n}\n\n.PDbjULsi7JNe12ZTYmCrl{\n    position: absolute;\n    top: 70px;\n    width: calc(100% - 10px);\n    right: 0%;\n    left: 0%;\n    margin-right: auto !important;\n    margin-left: auto !important;\n}\n\n._3z0Q5bl8Jkz6zlKbo5EpWw{\n    overflow: scroll;\n}\n\n._1fwnD348WPEtOs2Aa-4e82{\n    position: absolute;\n    margin-top: auto;\n    height: 70px;\n    bottom: 0;\n}\n\n._1JyRgytGS-wiu34QSFDH5e{\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n}\n\n.oqdLfessAg8s3u0t1ok58{\n    position: absolute;\n    top: 60px;\n    width: 100vw;\n    height: calc(100% - 130px);\n}\n\n.vCFPw61qnEavmlZV7jKof{\n    width: 100vw;\n    height: calc(100% - 60px);\n}\n\n._1fd9zxRHKKFLlExOcGYoTs{\n    position: fixed !important;\n    bottom: 100px;\n    right: 30px;\n    width: 100px;\n}\n\n._2osRyzwW4vbFpHHW8KvPcY{\n    position: absolute;\n    top: 70px;\n}", ""]);
 
 // Exports
 exports.locals = {
@@ -38297,7 +38329,10 @@ exports.locals = {
 	"gridCtnr": "_3z0Q5bl8Jkz6zlKbo5EpWw",
 	"footer": "_1fwnD348WPEtOs2Aa-4e82",
 	"footerNav": "_1JyRgytGS-wiu34QSFDH5e",
-	"refri": "oqdLfessAg8s3u0t1ok58"
+	"refri": "oqdLfessAg8s3u0t1ok58",
+	"drawer": "vCFPw61qnEavmlZV7jKof",
+	"addFab": "_1fd9zxRHKKFLlExOcGYoTs",
+	"addSubHeader": "_2osRyzwW4vbFpHHW8KvPcY"
 };
 
 /***/ }),
@@ -74253,12 +74288,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 const AppBar_1 = __importDefault(__webpack_require__(/*! @material-ui/core/AppBar */ "./node_modules/@material-ui/core/AppBar/index.js"));
 const Typography_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/Typography/index.js"));
+const GridList_1 = __importDefault(__webpack_require__(/*! @material-ui/core/GridList */ "./node_modules/@material-ui/core/GridList/index.js"));
+const GridListTile_1 = __importDefault(__webpack_require__(/*! @material-ui/core/GridListTile */ "./node_modules/@material-ui/core/GridListTile/index.js"));
+const GridListTileBar_1 = __importDefault(__webpack_require__(/*! @material-ui/core/GridListTileBar */ "./node_modules/@material-ui/core/GridListTileBar/index.js"));
 const PanoramaVertical_1 = __importDefault(__webpack_require__(/*! @material-ui/icons/PanoramaVertical */ "./node_modules/@material-ui/icons/PanoramaVertical.js"));
 const LocalDining_1 = __importDefault(__webpack_require__(/*! @material-ui/icons/LocalDining */ "./node_modules/@material-ui/icons/LocalDining.js"));
 const LocalShipping_1 = __importDefault(__webpack_require__(/*! @material-ui/icons/LocalShipping */ "./node_modules/@material-ui/icons/LocalShipping.js"));
 const Tab_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Tab */ "./node_modules/@material-ui/core/Tab/index.js"));
 const Tabs_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Tabs */ "./node_modules/@material-ui/core/Tabs/index.js"));
 const AddAPhoto_1 = __importDefault(__webpack_require__(/*! @material-ui/icons/AddAPhoto */ "./node_modules/@material-ui/icons/AddAPhoto.js"));
+const Fab_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Fab */ "./node_modules/@material-ui/core/Fab/index.js"));
+const Add_1 = __importDefault(__webpack_require__(/*! @material-ui/icons/Add */ "./node_modules/@material-ui/icons/Add.js"));
 const lib_1 = __webpack_require__(/*! lib */ "./src/lib/index.tsx");
 const Refrigerator_1 = __webpack_require__(/*! ./Refrigerator */ "./src/Refrigerator/index.tsx");
 const Style = __importStar(__webpack_require__(/*! ./App.css */ "./src/App.css"));
@@ -74267,17 +74307,20 @@ var NavTab;
     NavTab[NavTab["refrigerator"] = 0] = "refrigerator";
     NavTab[NavTab["get"] = 1] = "get";
     NavTab[NavTab["reccomend"] = 2] = "reccomend";
+    NavTab[NavTab["add"] = 3] = "add";
 })(NavTab || (NavTab = {}));
 function App() {
     const [images, setImages] = react_1.useState([]);
     const [tab, setTab] = react_1.useState(NavTab.refrigerator);
     const [items, setItems] = react_1.useState([]);
+    const [onadd, setonAdd] = react_1.useState(false);
     react_1.useEffect(() => {
         lib_1.fetchAllItems().then((items) => {
             setItems(items);
         });
     }, []);
     function onInsertPhoto() {
+        setTab(NavTab.add);
         const camera = document.getElementById("camera-input");
         camera.click();
     }
@@ -74310,6 +74353,11 @@ function App() {
     }
     function onTabChange(ev, val) {
         setTab(val);
+        if (val == NavTab.refrigerator) {
+            lib_1.fetchAllItems().then((items) => {
+                setItems(items);
+            });
+        }
     }
     return (react_1.default.createElement("div", { className: Style.base },
         react_1.default.createElement(AppBar_1.default, { className: Style.header },
@@ -74319,6 +74367,16 @@ function App() {
             switch (tab) {
                 case NavTab.refrigerator:
                     return (react_1.default.createElement(Refrigerator_1.Refri, { className: Style.refri, items: items }));
+                case NavTab.add:
+                    return (react_1.default.createElement("div", { className: Style.drawer },
+                        react_1.default.createElement("div", { className: Style.gridCtnr },
+                            react_1.default.createElement(GridList_1.default, { cellHeight: 160, cols: 2, className: Style.gridList }, images.map((image) => (react_1.default.createElement(GridListTile_1.default, { key: image.file.name, cols: 1 },
+                                react_1.default.createElement("img", { src: image.url, alt: "error" }),
+                                image.title == "" ? null :
+                                    react_1.default.createElement(GridListTileBar_1.default, { title: image.title })))))),
+                        react_1.default.createElement(Fab_1.default, { className: Style.addFab, variant: "extended", color: "secondary" },
+                            react_1.default.createElement(Add_1.default, null),
+                            "\u51B7\u8535\u5EAB\u306B\u8FFD\u52A0")));
                 default:
                     return null;
             }
@@ -74468,6 +74526,7 @@ function fetchItemName(file) {
 exports.fetchItemName = fetchItemName;
 function fetchAllItems() {
     return __awaiter(this, void 0, void 0, function* () {
+        console.log("fetch");
         return [
             { name: "carrot", count: 3 },
             { name: "tomato", count: 4 }
@@ -74475,6 +74534,11 @@ function fetchAllItems() {
     });
 }
 exports.fetchAllItems = fetchAllItems;
+function postItems() {
+    return __awaiter(this, void 0, void 0, function* () {
+    });
+}
+exports.postItems = postItems;
 
 
 /***/ }),

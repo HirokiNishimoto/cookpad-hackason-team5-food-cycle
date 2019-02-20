@@ -8,3 +8,6 @@ export const gridCtnr: string;
 export const footer: string;
 export const footerNav: string;
 export const refri: string;
+export const drawer: string;
+export const addFab: string;
+export const addSubHeader: string;
