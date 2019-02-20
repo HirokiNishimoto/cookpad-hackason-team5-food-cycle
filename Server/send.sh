@@ -1,0 +1,1 @@
+scp -i ~/.ssh/GCP/default/id_ed25519 -r $(pwd) aki@34.73.34.185:~ 
