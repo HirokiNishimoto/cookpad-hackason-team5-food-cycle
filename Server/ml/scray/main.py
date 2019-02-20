@@ -38,18 +38,18 @@ for i in tags:
 def main(tags):
     url_lists = get_url.give_me_url_lists(tags)
     data= []
-    #data = [{recipe_url:"recipe_url","picture_url:"picture_url", ingredient:["apple","banana"]},{   }, {   }]
+    #data = [{recipe_url:"recipe_url","picture_url:"picture_url", ingredients:["apple","banana"]},{   }, {   }]
     for url in url_lists:
         data.append(scrayping.recipe(url,check))
-        time.sleep(1)
+        time.sleep(0.5)
 
 
-    # for i in data:
-    #     ingre = i.ingredient
-    #     for item in ingre:
-    #         for check_ingre in check:
-    #             if(item == check_ingre):
-    #                 ingre.pop(i)
+    for i in data:
+        ingre = i["ingredients"]
+        for item in ingre:
+            for check_ingre in check:
+                if(check_ingre in item):
+                    ingre.remove(item)
 
     output = {"data": data}
 
