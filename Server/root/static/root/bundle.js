@@ -38284,7 +38284,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".LeFt5T0EqAiCJR4_F2OqM{\n    background-color: #fff3e0;\n    height: 100vh;\n}\n\n.hwRc6f9WKlpNo0-FJMnLB{\n    position: fixed !important;\n    height: 60px;\n}\n\n.jrOXxo5ePDyXJpxqVgSmZ{\n    position: absolute;\n    top: 0%;\n    bottom: 0%;\n    margin: auto auto auto 40px !important;\n    line-height: 60px !important;\n}\n\n.aCo3OzLsfIYPjsuZXSabN{\n    position: absolute;\n    right: 20px;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n}\n\n._3h-jo0U0xXxSZ1fK-9baK5{\n    position: fixed !important;\n    right: 30px;\n    bottom: 50px;\n}\n\n.PDbjULsi7JNe12ZTYmCrl{\n    position: absolute;\n    top: 70px;\n    width: calc(100% - 10px);\n    right: 0%;\n    left: 0%;\n    margin-right: auto !important;\n    margin-left: auto !important;\n}\n\n._3z0Q5bl8Jkz6zlKbo5EpWw{\n    overflow: scroll;\n}\n\n._1fwnD348WPEtOs2Aa-4e82{\n    position: absolute;\n    margin-top: auto;\n    height: 80px;\n    bottom: 0;\n}\n\n._1JyRgytGS-wiu34QSFDH5e{\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n}\n", ""]);
+exports.push([module.i, ".LeFt5T0EqAiCJR4_F2OqM{\n    background-color: #fff3e0;\n    height: 100vh;\n}\n\n.hwRc6f9WKlpNo0-FJMnLB{\n    position: fixed !important;\n    height: 60px;\n}\n\n.jrOXxo5ePDyXJpxqVgSmZ{\n    position: absolute;\n    top: 0%;\n    bottom: 0%;\n    margin: auto auto auto 40px !important;\n    line-height: 60px !important;\n}\n\n.aCo3OzLsfIYPjsuZXSabN{\n    position: absolute;\n    right: 20px;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n}\n\n._3h-jo0U0xXxSZ1fK-9baK5{\n    position: fixed !important;\n    right: 30px;\n    bottom: 50px;\n}\n\n.PDbjULsi7JNe12ZTYmCrl{\n    position: absolute;\n    top: 70px;\n    width: calc(100% - 10px);\n    right: 0%;\n    left: 0%;\n    margin-right: auto !important;\n    margin-left: auto !important;\n}\n\n._3z0Q5bl8Jkz6zlKbo5EpWw{\n    overflow: scroll;\n}\n\n._1fwnD348WPEtOs2Aa-4e82{\n    position: absolute;\n    margin-top: auto;\n    height: 70px;\n    bottom: 0;\n}\n\n._1JyRgytGS-wiu34QSFDH5e{\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n}\n\n.oqdLfessAg8s3u0t1ok58{\n    position: absolute;\n    top: 60px;\n    width: 100vw;\n    height: calc(100% - 130px);\n}", ""]);
 
 // Exports
 exports.locals = {
@@ -38296,7 +38296,8 @@ exports.locals = {
 	"gridList": "PDbjULsi7JNe12ZTYmCrl",
 	"gridCtnr": "_3z0Q5bl8Jkz6zlKbo5EpWw",
 	"footer": "_1fwnD348WPEtOs2Aa-4e82",
-	"footerNav": "_1JyRgytGS-wiu34QSFDH5e"
+	"footerNav": "_1JyRgytGS-wiu34QSFDH5e",
+	"refri": "oqdLfessAg8s3u0t1ok58"
 };
 
 /***/ }),
@@ -74259,6 +74260,7 @@ const Tab_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Tab */ "
 const Tabs_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Tabs */ "./node_modules/@material-ui/core/Tabs/index.js"));
 const AddAPhoto_1 = __importDefault(__webpack_require__(/*! @material-ui/icons/AddAPhoto */ "./node_modules/@material-ui/icons/AddAPhoto.js"));
 const lib_1 = __webpack_require__(/*! lib */ "./src/lib/index.tsx");
+const Refrigerator_1 = __webpack_require__(/*! ./Refrigerator */ "./src/Refrigerator/index.tsx");
 const Style = __importStar(__webpack_require__(/*! ./App.css */ "./src/App.css"));
 var NavTab;
 (function (NavTab) {
@@ -74269,6 +74271,12 @@ var NavTab;
 function App() {
     const [images, setImages] = react_1.useState([]);
     const [tab, setTab] = react_1.useState(NavTab.refrigerator);
+    const [items, setItems] = react_1.useState([]);
+    react_1.useEffect(() => {
+        lib_1.fetchAllItems().then((items) => {
+            setItems(items);
+        });
+    }, []);
     function onInsertPhoto() {
         const camera = document.getElementById("camera-input");
         camera.click();
@@ -74307,6 +74315,14 @@ function App() {
         react_1.default.createElement(AppBar_1.default, { className: Style.header },
             react_1.default.createElement(Typography_1.default, { variant: "h5", color: "textSecondary", className: Style.title }, "Food Cycle"),
             react_1.default.createElement(AddAPhoto_1.default, { fontSize: "large", className: Style.account, onClick: onInsertPhoto })),
+        (function () {
+            switch (tab) {
+                case NavTab.refrigerator:
+                    return (react_1.default.createElement(Refrigerator_1.Refri, { className: Style.refri, items: items }));
+                default:
+                    return null;
+            }
+        })(),
         react_1.default.createElement(AppBar_1.default, { position: "fixed", className: Style.footer },
             react_1.default.createElement(Tabs_1.default, { value: tab, onChange: onTabChange, className: Style.footerNav, variant: "fullWidth", indicatorColor: "secondary" },
                 react_1.default.createElement(Tab_1.default, { value: NavTab.refrigerator, label: "\u51B7\u8535\u5EAB", icon: react_1.default.createElement(PanoramaVertical_1.default, null) }),
@@ -74316,6 +74332,64 @@ function App() {
             react_1.default.createElement("input", { type: "file", accept: "image/", hidden: true, id: "camera-input", onChange: onChangeImage }))));
 }
 exports.default = App;
+
+
+/***/ }),
+
+/***/ "./src/Refrigerator/Refri.tsx":
+/*!************************************!*\
+  !*** ./src/Refrigerator/Refri.tsx ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+const ListItem_1 = __importDefault(__webpack_require__(/*! @material-ui/core/ListItem */ "./node_modules/@material-ui/core/ListItem/index.js"));
+const core_1 = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/index.es.js");
+const theme = core_1.createMuiTheme({
+    palette: {
+        primary: { main: "#CA423B" },
+        secondary: { main: "#388e3c" },
+        text: {
+            secondary: "#000000"
+        }
+    }
+});
+function Refri(props) {
+    return (react_1.default.createElement("div", { className: props.className },
+        react_1.default.createElement(core_1.MuiThemeProvider, { theme: theme },
+            react_1.default.createElement(core_1.ListSubheader, null, " \u98DF\u6750 "),
+            props.items.map((item) => [
+                react_1.default.createElement(ListItem_1.default, null,
+                    react_1.default.createElement(core_1.ListItemText, { primary: item.name, secondary: "量数: " + item.count })),
+                react_1.default.createElement(core_1.Divider, { variant: "middle" })
+            ]))));
+}
+exports.Refri = Refri;
+
+
+/***/ }),
+
+/***/ "./src/Refrigerator/index.tsx":
+/*!************************************!*\
+  !*** ./src/Refrigerator/index.tsx ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(/*! ./Refri */ "./src/Refrigerator/Refri.tsx"));
 
 
 /***/ }),
@@ -74392,6 +74466,15 @@ function fetchItemName(file) {
     });
 }
 exports.fetchItemName = fetchItemName;
+function fetchAllItems() {
+    return __awaiter(this, void 0, void 0, function* () {
+        return [
+            { name: "carrot", count: 3 },
+            { name: "tomato", count: 4 }
+        ];
+    });
+}
+exports.fetchAllItems = fetchAllItems;
 
 
 /***/ }),

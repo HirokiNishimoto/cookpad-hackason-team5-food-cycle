@@ -47,7 +47,7 @@
 .footer{
     position: absolute;
     margin-top: auto;
-    height: 80px;
+    height: 70px;
     bottom: 0;
 }
 
@@ -55,4 +55,11 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.refri{
+    position: absolute;
+    top: 60px;
+    width: 100vw;
+    height: calc(100% - 130px);
 }

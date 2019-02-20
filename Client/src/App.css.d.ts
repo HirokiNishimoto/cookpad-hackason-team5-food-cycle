@@ -7,3 +7,4 @@ export const gridList: string;
 export const gridCtnr: string;
 export const footer: string;
 export const footerNav: string;
+export const refri: string;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Typography from "@material-ui/core/Typography";
 import GridList from "@material-ui/core/GridList";
@@ -11,7 +11,8 @@ import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import Camera from "@material-ui/icons/AddAPhoto";
 
-import { fetchItemName } from "lib";
+import { fetchItemName, Item, fetchAllItems } from "lib";
+import { Refri } from "./Refrigerator";
 import * as Style from "./App.css";
 
 enum NavTab {
@@ -23,6 +24,13 @@ enum NavTab {
 function App(){
     const [images, setImages] = useState<Images[]>([]);
     const [tab, setTab] = useState(NavTab.refrigerator);
+    const [items, setItems] = useState<Item[]>([])
+
+    useEffect(() => {
+        fetchAllItems().then((items) => {
+            setItems(items);
+        })
+    },[])
 
     function onInsertPhoto(){
         const camera = document.getElementById("camera-input") as HTMLInputElement;
@@ -81,7 +89,14 @@ function App(){
                 </GridList>
             </div> */}
 
-            
+            {(function(){
+            switch (tab) {
+                case NavTab.refrigerator:
+                    return (<Refri className={Style.refri} items={items}/>)
+                default:
+                    return null;
+            }
+            })()}
 
             <AppBar position="fixed" className={Style.footer}>
                 <Tabs value={tab}
