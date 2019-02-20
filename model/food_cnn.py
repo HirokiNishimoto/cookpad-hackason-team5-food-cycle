@@ -42,15 +42,15 @@ def model_train(X, y):
     model.add(Flatten())
     model.add(Dense(512))
     model.add(Activation('relu'))
-    model.add(Dropout(0.5))
-    model.add(Dense(5))
-    model.add(Activation('softmax'))
-
+    model.add(Dropout(0.5)) 
+    model.add(Dense(5)) 
+    model.add(Activation('softmax')) 
+    
     opt = keras.optimizers.rmsprop(lr=0.0001, decay=1e-6)
     model.compile(loss='categorical_crossentropy',
             optimizer=opt, metrics=['accuracy'])
 
-    model.fit(X, y, batch_size=32, epochs=100)
+    model.fit(X, y, batch_size=32, epochs=50)
 
     # モデルの保存
     model.save("./food_cnn.hs")
@@ -59,7 +59,7 @@ def model_train(X, y):
 
 
 def model_eval(model, X, y):
-    scores = model.evaluate(X, y, verbose=1)
+    scores = model.evaluate(X, y, verbose=50)
     print('Test Loss: ', scores[0])
     print('Test Accuracy: ', scores[1])
 
