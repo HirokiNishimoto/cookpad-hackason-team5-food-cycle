@@ -36107,6 +36107,102 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/icons/LocalDining.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@material-ui/icons/LocalDining.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement(_react.default.Fragment, null, _react.default.createElement("path", {
+  fill: "none",
+  d: "M0 0h24v24H0z"
+}), _react.default.createElement("path", {
+  d: "M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"
+})), 'LocalDining');
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/LocalShipping.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@material-ui/icons/LocalShipping.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement(_react.default.Fragment, null, _react.default.createElement("path", {
+  fill: "none",
+  d: "M0 0h24v24H0z"
+}), _react.default.createElement("path", {
+  d: "M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"
+})), 'LocalShipping');
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/PanoramaVertical.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@material-ui/icons/PanoramaVertical.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement(_react.default.Fragment, null, _react.default.createElement("path", {
+  d: "M19.94 21.12c-1.1-2.94-1.64-6.03-1.64-9.12 0-3.09.55-6.18 1.64-9.12.04-.11.06-.22.06-.31 0-.34-.23-.57-.63-.57H4.63c-.4 0-.63.23-.63.57 0 .1.02.2.06.31C5.16 5.82 5.71 8.91 5.71 12c0 3.09-.55 6.18-1.64 9.12-.05.11-.07.22-.07.31 0 .33.23.57.63.57h14.75c.39 0 .63-.24.63-.57-.01-.1-.03-.2-.07-.31zM6.54 20c.77-2.6 1.16-5.28 1.16-8 0-2.72-.39-5.4-1.16-8h10.91c-.77 2.6-1.16 5.28-1.16 8 0 2.72.39 5.4 1.16 8H6.54z"
+}), _react.default.createElement("path", {
+  fill: "none",
+  d: "M0 0h24v24H0z"
+})), 'PanoramaVertical');
+
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/icons/utils/createSvgIcon.js":
 /*!****************************************************************!*\
   !*** ./node_modules/@material-ui/icons/utils/createSvgIcon.js ***!
@@ -38188,16 +38284,19 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".hwRc6f9WKlpNo0-FJMnLB{\n    position: fixed !important;\n    height: 60px;\n}\n\n.jrOXxo5ePDyXJpxqVgSmZ{\n    position: absolute;\n    top: 0%;\n    bottom: 0%;\n    margin: auto auto auto 40px !important;\n    line-height: 60px !important;\n}\n\n.aCo3OzLsfIYPjsuZXSabN{\n    position: absolute;\n    right: 20px;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n}\n\n._3h-jo0U0xXxSZ1fK-9baK5{\n    position: fixed !important;\n    right: 30px;\n    bottom: 50px;\n}\n\n.PDbjULsi7JNe12ZTYmCrl{\n    position: absolute;\n    top: 70px;\n    width: calc(100% - 10px);\n    right: 0%;\n    left: 0%;\n    margin-right: auto !important;\n    margin-left: auto !important;\n}\n\n._3z0Q5bl8Jkz6zlKbo5EpWw{\n    overflow: scroll;\n}", ""]);
+exports.push([module.i, ".LeFt5T0EqAiCJR4_F2OqM{\n    background-color: #fff3e0;\n    height: 100vh;\n}\n\n.hwRc6f9WKlpNo0-FJMnLB{\n    position: fixed !important;\n    height: 60px;\n}\n\n.jrOXxo5ePDyXJpxqVgSmZ{\n    position: absolute;\n    top: 0%;\n    bottom: 0%;\n    margin: auto auto auto 40px !important;\n    line-height: 60px !important;\n}\n\n.aCo3OzLsfIYPjsuZXSabN{\n    position: absolute;\n    right: 20px;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n}\n\n._3h-jo0U0xXxSZ1fK-9baK5{\n    position: fixed !important;\n    right: 30px;\n    bottom: 50px;\n}\n\n.PDbjULsi7JNe12ZTYmCrl{\n    position: absolute;\n    top: 70px;\n    width: calc(100% - 10px);\n    right: 0%;\n    left: 0%;\n    margin-right: auto !important;\n    margin-left: auto !important;\n}\n\n._3z0Q5bl8Jkz6zlKbo5EpWw{\n    overflow: scroll;\n}\n\n._1fwnD348WPEtOs2Aa-4e82{\n    position: absolute;\n    margin-top: auto;\n    height: 80px;\n    bottom: 0;\n}\n\n._1JyRgytGS-wiu34QSFDH5e{\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n}\n", ""]);
 
 // Exports
 exports.locals = {
+	"base": "LeFt5T0EqAiCJR4_F2OqM",
 	"header": "hwRc6f9WKlpNo0-FJMnLB",
 	"title": "jrOXxo5ePDyXJpxqVgSmZ",
 	"account": "aCo3OzLsfIYPjsuZXSabN",
 	"fabCamera": "_3h-jo0U0xXxSZ1fK-9baK5",
 	"gridList": "PDbjULsi7JNe12ZTYmCrl",
-	"gridCtnr": "_3z0Q5bl8Jkz6zlKbo5EpWw"
+	"gridCtnr": "_3z0Q5bl8Jkz6zlKbo5EpWw",
+	"footer": "_1fwnD348WPEtOs2Aa-4e82",
+	"footerNav": "_1JyRgytGS-wiu34QSFDH5e"
 };
 
 /***/ }),
@@ -74153,14 +74252,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 const AppBar_1 = __importDefault(__webpack_require__(/*! @material-ui/core/AppBar */ "./node_modules/@material-ui/core/AppBar/index.js"));
 const Typography_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/Typography/index.js"));
-const GridList_1 = __importDefault(__webpack_require__(/*! @material-ui/core/GridList */ "./node_modules/@material-ui/core/GridList/index.js"));
-const GridListTile_1 = __importDefault(__webpack_require__(/*! @material-ui/core/GridListTile */ "./node_modules/@material-ui/core/GridListTile/index.js"));
-const GridListTileBar_1 = __importDefault(__webpack_require__(/*! @material-ui/core/GridListTileBar */ "./node_modules/@material-ui/core/GridListTileBar/index.js"));
+const PanoramaVertical_1 = __importDefault(__webpack_require__(/*! @material-ui/icons/PanoramaVertical */ "./node_modules/@material-ui/icons/PanoramaVertical.js"));
+const LocalDining_1 = __importDefault(__webpack_require__(/*! @material-ui/icons/LocalDining */ "./node_modules/@material-ui/icons/LocalDining.js"));
+const LocalShipping_1 = __importDefault(__webpack_require__(/*! @material-ui/icons/LocalShipping */ "./node_modules/@material-ui/icons/LocalShipping.js"));
+const Tab_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Tab */ "./node_modules/@material-ui/core/Tab/index.js"));
+const Tabs_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Tabs */ "./node_modules/@material-ui/core/Tabs/index.js"));
 const AddAPhoto_1 = __importDefault(__webpack_require__(/*! @material-ui/icons/AddAPhoto */ "./node_modules/@material-ui/icons/AddAPhoto.js"));
 const lib_1 = __webpack_require__(/*! lib */ "./src/lib/index.tsx");
 const Style = __importStar(__webpack_require__(/*! ./App.css */ "./src/App.css"));
+var NavTab;
+(function (NavTab) {
+    NavTab[NavTab["refrigerator"] = 0] = "refrigerator";
+    NavTab[NavTab["get"] = 1] = "get";
+    NavTab[NavTab["reccomend"] = 2] = "reccomend";
+})(NavTab || (NavTab = {}));
 function App() {
     const [images, setImages] = react_1.useState([]);
+    const [tab, setTab] = react_1.useState(NavTab.refrigerator);
     function onInsertPhoto() {
         const camera = document.getElementById("camera-input");
         camera.click();
@@ -74192,15 +74300,18 @@ function App() {
             reader.readAsDataURL(ev.target.files[0]);
         });
     }
-    return (react_1.default.createElement("div", null,
+    function onTabChange(ev, val) {
+        setTab(val);
+    }
+    return (react_1.default.createElement("div", { className: Style.base },
         react_1.default.createElement(AppBar_1.default, { className: Style.header },
             react_1.default.createElement(Typography_1.default, { variant: "h5", color: "textSecondary", className: Style.title }, "Food Cycle"),
             react_1.default.createElement(AddAPhoto_1.default, { fontSize: "large", className: Style.account, onClick: onInsertPhoto })),
-        react_1.default.createElement("div", { className: Style.gridCtnr },
-            react_1.default.createElement(GridList_1.default, { cellHeight: 160, cols: 1, className: Style.gridList }, images.map((image) => (react_1.default.createElement(GridListTile_1.default, { key: image.file.name, cols: 1 },
-                react_1.default.createElement("img", { src: image.url, alt: "error" }),
-                image.title == "" ? null :
-                    react_1.default.createElement(GridListTileBar_1.default, { title: image.title })))))),
+        react_1.default.createElement(AppBar_1.default, { position: "fixed", className: Style.footer },
+            react_1.default.createElement(Tabs_1.default, { value: tab, onChange: onTabChange, className: Style.footerNav, variant: "fullWidth", indicatorColor: "secondary" },
+                react_1.default.createElement(Tab_1.default, { value: NavTab.refrigerator, label: "\u51B7\u8535\u5EAB", icon: react_1.default.createElement(PanoramaVertical_1.default, null) }),
+                react_1.default.createElement(Tab_1.default, { value: NavTab.reccomend, label: "\u304A\u3059\u3059\u3081", icon: react_1.default.createElement(LocalDining_1.default, null) }),
+                react_1.default.createElement(Tab_1.default, { value: NavTab.get, label: "\u6CE8\u6587", icon: react_1.default.createElement(LocalShipping_1.default, null) }))),
         react_1.default.createElement("form", { action: "" },
             react_1.default.createElement("input", { type: "file", accept: "image/", hidden: true, id: "camera-input", onChange: onChangeImage }))));
 }
@@ -74276,7 +74387,7 @@ function fetchItemName(file) {
     return __awaiter(this, void 0, void 0, function* () {
         const data = new FormData();
         data.append("file", file);
-        const response = yield axios_1.default.post("/itemname/", data);
+        const response = yield axios_1.default.post("/ml/itemname/", data);
         return response.data.name;
     });
 }

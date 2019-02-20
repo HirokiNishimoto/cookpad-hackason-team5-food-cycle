@@ -43,12 +43,27 @@ function staticFilesCopyDone(beforePath,afterPath){
 
 function moveStaticFiles2ServerDir(){
     const beforePath = path.join(__dirname,'dist/*');
-    const afterPath  = path.join(__dirname,'../Server/static/');
+    const afterPath  = path.join(__dirname,'../Server/root/static/root/');
 
     filecopy(beforePath,afterPath,{}).then(() => {
         console.log('\ncopied static files');
         console.log('\n from '+beforePath);
         console.log('\n  to  '+afterPath);
+
+        moveTemplates();
+    })
+}
+
+function moveTemplates(){
+    const beforePath = path.join(__dirname,'../Server/root/static/root/*.html');
+    const afterPath  = path.join(__dirname,'../Server/root/templates/root/');
+
+    filecopy(beforePath,afterPath,{}).then(() => {
+        console.log('\ncopied static files');
+        console.log('\n from '+beforePath);
+        console.log('\n  to  '+afterPath);
+
+        
     })
 }
 

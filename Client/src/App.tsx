@@ -4,13 +4,25 @@ import Typography from "@material-ui/core/Typography";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
+import PanoramaVertical from "@material-ui/icons/PanoramaVertical";
+import LocalDining from "@material-ui/icons/LocalDining";
+import LocalShipping from "@material-ui/icons/LocalShipping";
+import Tab from "@material-ui/core/Tab";
+import Tabs from "@material-ui/core/Tabs";
 import Camera from "@material-ui/icons/AddAPhoto";
 
 import { fetchItemName } from "lib";
 import * as Style from "./App.css";
 
+enum NavTab {
+    refrigerator,
+    get,
+    reccomend
+}
+
 function App(){
     const [images, setImages] = useState<Images[]>([]);
+    const [tab, setTab] = useState(NavTab.refrigerator);
 
     function onInsertPhoto(){
         const camera = document.getElementById("camera-input") as HTMLInputElement;
@@ -44,17 +56,20 @@ function App(){
 
     }
 
+    function onTabChange(ev: React.ChangeEvent<{}>, val: any){
+        setTab(val);
+    }
+
     return(
-        <div>
+        <div className={Style.base}>
             <AppBar className={Style.header}>
                 <Typography variant="h5" color="textSecondary" className={Style.title}>
                     Food Cycle
                 </Typography>
                 <Camera fontSize="large" className={Style.account} onClick={onInsertPhoto} />
             </AppBar>
-
-            <div className={Style.gridCtnr}>
-                <GridList cellHeight={160} cols={1} className={Style.gridList}>
+            {/* <div className={Style.gridCtnr}>
+                <GridList cellHeight={160} cols={2} className={Style.gridList}>
                 {images.map((image) => (
                     <GridListTile key={image.file.name} cols={1}>
                         <img src={image.url} alt="error"/>
@@ -64,8 +79,23 @@ function App(){
                     </GridListTile>
                 ))}
                 </GridList>
-            </div>
+            </div> */}
 
+            
+
+            <AppBar position="fixed" className={Style.footer}>
+                <Tabs value={tab}
+                    onChange={onTabChange}
+                    className={Style.footerNav}
+                    variant="fullWidth"
+                    indicatorColor="secondary"
+                >
+                    <Tab value={NavTab.refrigerator} label="冷蔵庫" icon={<PanoramaVertical />} />
+                    <Tab value={NavTab.reccomend} label="おすすめ" icon={<LocalDining />} />
+                    <Tab value={NavTab.get} label="注文" icon={<LocalShipping />} />
+                </Tabs>
+            </AppBar>
+            
             <form action="">
                 <input type="file" accept="image/" hidden id="camera-input" onChange={onChangeImage}/>
             </form>
